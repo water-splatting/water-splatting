@@ -1,0 +1,54 @@
+[project]
+name = "water-splatting"
+version = "0.0.1"
+# extend with author licensing etc.
+
+
+dependencies = [
+    "nerfstudio>=0.3.4",
+    "pytest",
+    "pyright",
+    "ruff",
+    "black",
+    "sphinx",
+    "sphinx_rtd_theme",
+    "sphinxcontrib-bibtex",
+    "sphinxcontrib-video"
+]
+
+
+[tool.setuptools.packages.find]
+include = ["water_splatting*"]
+
+
+[tool.pyright]
+include = ["water_splatting"]
+exclude = ["**/__pycache__"]
+reportMissingImports = false
+reportMissingTypeStubs = false
+reportPrivateImportUsage = false
+pythonVersion = "3.8"
+pythonPlatform = "Linux"
+
+
+[tool.ruff]
+select = [
+    "E",  # pycodestyle errors.
+    "F",  # Pyflakes rules.
+    "PLC",  # Pylint convention warnings.
+    "PLE",  # Pylint errors.
+    "PLR",  # Pylint refactor recommendations.
+    "PLW",  # Pylint warnings.
+]
+ignore = [
+    "E501",  # Line too long. This is caught by black.
+    "F722",  # Forward annotation false positive from jaxtyping. This is caught by pyright.
+    "F821",  # Forward annotation false positive from jaxtyping. This should be caught by pyright.
+    "PLR2004",  # Magic value used in comparison.
+    "PLR0913",  # Too many arguments to function call.
+]
+
+[project.entry-points.'nerfstudio.method_configs']
+water_splatting = "water_splatting.water_splatting_config:water_splatting_method"
+water_splatting_big = "water_splatting.water_splatting_config:water_splatting_method_big"
+# export NERFSTUDIO_METHOD_CONFIGS="water-splatting=water_splatting.water_splatting_config:water_splatting_method"
