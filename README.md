@@ -21,7 +21,7 @@
 <p align="center">
   <img alt="WaterSplatting Reconstruction" src=".assets/curasao.webp" />
 </p>
-    <p class="justify" style="font-size: 1rem;margin: 0 0 0.4rem 0; text-align-last: center">
+    <p align="center" class="justify" style="font-size: 1rem;margin: 0 0 0.4rem 0; text-align-last: center">
     <strong>WaterSplatting</strong> combines 3DGS with volume rendering to enable water/fog modeling</strong>
     </p>
 <p align="justify">
