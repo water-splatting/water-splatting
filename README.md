@@ -18,15 +18,9 @@
   <div align="center"></div>
 </p>
 <br/>
-<style>
-      .video.teaser-video::before {
-        padding-bottom: 50%;
-      }
-    </style>
-    <video class="video" style="aspect-ratio: 1920/1080" loop muted autoplay>
-      <source src="/.assets/curasao.webm" type="video/webm">
-      <source src="/.assets/curasao.mp4" type="video/mp4">
-    </video>
+<p align="center">
+  <img alt="WaterSplatting Reconstruction" src=".assets/curasao.webp" />
+</p>
     <p class="justify" style="font-size: 1rem;margin: 0 0 0.4rem 0; text-align-last: center">
     <strong>WaterSplatting</strong> combines 3DGS with volume rendering to enable water/fog modeling</strong>
     </p>
@@ -43,37 +37,30 @@ Furthermore, it does so while offering real-time rendering performance.
 
 Our method is based on [nerfstudio](https://docs.nerf.studio/index.html).
 
-### Install nerfstudio
-#### Create environment
+### Create environment
 ```bash
 conda create --name water_splatting -y python=3.8
 conda activate water_splatting
 python -m pip install --upgrade pip
 ```
-#### PyTorch
+
+### Install WaterSplatting
+
 ```bash
+# Install PyTorch
 pip uninstall torch torchvision functorch tinycudann
-
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
-```
 
-#### Install tiny-cuda-nn
-```bash
+# Install tiny-cuda-nn
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
-```
 
-#### Install nerfstudio
-```bash
+# Install nerfstudio
 pip install nerfstudio
 ns-install-cli
-```
 
-### Local installation
-```bash
+# WaterSplatting
 git clone git@github.com:water-splatting/water-splatting.git
 cd water_splatting
-
-conda activate water_splatting
 pip install -e .
 ```
 
