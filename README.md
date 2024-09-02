@@ -61,7 +61,7 @@ ns-install-cli
 # WaterSplatting
 git clone git@github.com:water-splatting/water-splatting.git
 cd water_splatting
-pip install -e .
+pip install --no-use-pep517 -e .
 ```
 
 ## Training
