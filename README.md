@@ -65,7 +65,7 @@ pip install --no-use-pep517 -e .
 ```
 
 ## Training
-To start the training on the [SeaThru-NeRF]() dataset, run the following commands:
+To start the training on the [SeaThru-NeRF](https://sea-thru-nerf.github.io/) dataset, run the following commands:
 ```bash
 cd /your_path_to_repo/water_splatting
 ns-train water-splatting --vis viewer+wandb colmap --downscale-factor 1 --colmap-path sparse/0 --data /your_path_to_dataset/SeathruNeRF_dataset/IUI3-RedSea --images-path Images_wb
