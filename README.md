@@ -70,6 +70,7 @@ To start the training on the [SeaThru-NeRF](https://sea-thru-nerf.github.io/) da
 cd /your_path_to_repo/water_splatting
 ns-train water-splatting --vis viewer+wandb colmap --downscale-factor 1 --colmap-path sparse/0 --data /your_path_to_dataset/SeathruNeRF_dataset/IUI3-RedSea --images-path Images_wb
 ```
+Please note that: The training and testing splits reported in our paper are different from the default splits in nerfstudio, and are consistent with the splits used in the SeaThru-NeRF paper.
 
 ## Interactive viewer
 To start the viewer and explore the trained models, run one of the following:
