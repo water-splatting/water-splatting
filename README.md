@@ -55,12 +55,14 @@ pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 
 # Install nerfstudio
-pip install nerfstudio
+pip install nerfstudio==1.1.4
 ns-install-cli
 
 # WaterSplatting
 git clone git@github.com:water-splatting/water-splatting.git
 cd water_splatting
+git submodule init
+git submodule update --recursive
 pip install --no-use-pep517 -e .
 ```
 
