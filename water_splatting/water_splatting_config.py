@@ -8,7 +8,7 @@ from nerfstudio.engine.optimizers import AdamOptimizerConfig
 from nerfstudio.configs.base_config import ViewerConfig
 from water_splatting.water_splatting import WaterSplattingModelConfig
 
-NUM_STEPS = 15001
+NUM_STEPS = 15000
 # Base method configuration
 water_splatting_method = MethodSpecification(
     config=TrainerConfig(
@@ -22,7 +22,6 @@ water_splatting_method = MethodSpecification(
         pipeline=VanillaPipelineConfig(
             datamanager=FullImageDatamanagerConfig(
                 dataparser=NerfstudioDataParserConfig(load_3D_points=True),
-                cache_images_type="uint8",
             ),
             model=WaterSplattingModelConfig(
                 num_steps=NUM_STEPS,
@@ -108,7 +107,6 @@ water_splatting_method_big = MethodSpecification(
         pipeline=VanillaPipelineConfig(
             datamanager=FullImageDatamanagerConfig(
                 dataparser=NerfstudioDataParserConfig(load_3D_points=True),
-                cache_images_type="uint8",
             ),
             model=WaterSplattingModelConfig(
                 num_steps=NUM_STEPS,

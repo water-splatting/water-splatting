@@ -74,6 +74,13 @@ ns-train water-splatting --vis viewer+wandb colmap --downscale-factor 1 --colmap
 ```
 Please note that: The training and testing splits reported in our paper are different from the default splits in nerfstudio, and are consistent with the splits used in the SeaThru-NeRF paper.
 
+## Evaluation
+
+```bash
+cd /your_path_to_repo/water-splatting
+ns-eval --load-config outputs/unnamed/water-splatting/your_timestamp/config.yml --render-output-path renders/eval
+```
+
 ## Interactive viewer
 To start the viewer and explore the trained models, run one of the following:
 ```bash
@@ -86,11 +93,14 @@ To render a video on a trajectory (e.g., generated from the interactive viewer),
 ns-render camera-path --load-config outputs/unnamed/water-splatting/your_timestamp/config.yml --camera-path-filename /your_path_to_dataset/SeathruNeRF_dataset/IUI3-RedSea/camera_paths/your_trajectory.json --output-path renders/IUI3-RedSea/water_splatting.mp4
 ```
 
+Please note that the default output quality is lossy.
+
 ## Rendering dataset
 To render testing set for a checkpoint, run:
 ```bash
 ns-render dataset --load-config outputs/unnamed/water-splatting/your_timestamp/config.yml --data /your_path_to_dataset/SeathruNeRF_dataset/IUI3-RedSea
 ```
+Please note that the default output quality is lossy.
 </p>
 </section>
 
