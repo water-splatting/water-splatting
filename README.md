@@ -60,7 +60,7 @@ ns-install-cli
 
 # WaterSplatting
 git clone git@github.com:water-splatting/water-splatting.git
-cd water_splatting
+cd water-splatting
 git submodule init
 git submodule update --recursive
 pip install --no-use-pep517 -e .
@@ -69,7 +69,7 @@ pip install --no-use-pep517 -e .
 ## Training
 To start the training on the [SeaThru-NeRF](https://sea-thru-nerf.github.io/) dataset, run the following commands:
 ```bash
-cd /your_path_to_repo/water_splatting
+cd /your_path_to_repo/water-splatting
 ns-train water-splatting --vis viewer+wandb colmap --downscale-factor 1 --colmap-path sparse/0 --data /your_path_to_dataset/SeathruNeRF_dataset/IUI3-RedSea --images-path Images_wb
 ```
 Please note that: The training and testing splits reported in our paper are different from the default splits in nerfstudio, and are consistent with the splits used in the SeaThru-NeRF paper.
