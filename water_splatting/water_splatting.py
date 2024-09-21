@@ -86,7 +86,7 @@ class WaterSplattingModelConfig(ModelConfig):
     """Water Splatting Model Config"""
 
     _target: Type = field(default_factory=lambda: WaterSplattingModel)
-    num_steps: int = 15001
+    num_steps: int = 15000
     """Number of steps to train the model"""
     warmup_length: int = 500
     """period of steps where refinement is turned off"""
