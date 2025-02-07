@@ -755,10 +755,10 @@ class WaterSplattingModel(Model):
         yy, xx = torch.meshgrid(y, x)
         yy = (yy - cy) / camera.fy.item()
         xx = (xx - cx) / camera.fx.item()
-        directions = torch.stack([yy, xx, -1 * torch.ones_like(xx)], dim=-1)
+        directions = torch.stack([xx, yy, torch.ones_like(xx)], dim=-1)
         norms = torch.linalg.norm(directions, dim=-1, keepdim=True)
         directions = directions / norms
-        directions = directions @ R
+        directions = directions @ R.T
 
         directions_flat = directions.view(-1, 3)
         directions_encoded = self.direction_encoding(directions_flat)
