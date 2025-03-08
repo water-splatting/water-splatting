@@ -4,7 +4,7 @@
         <span class="title-small">Fast Underwater 3D Scene Reconstruction Using Gaussian Splatting</span>
       </h1>
   <p align="center">
-    <a>Huapeng Li</a>
+    <a href="https://github.com/IronLu11">Huapeng Li</a>
     ·
     <a>Wenxuan Song</a>
     ·
@@ -12,7 +12,9 @@
     ·
     <a>Alexandre Elsig</a>
     ·
-    <a>Jonas Kulhanek</a>
+    <a href="https://jkulhanek.com/">Jonas Kulhanek</a>
+  </p><p align="center">
+    <b><i>3DV 2025</i></b>
   </p>
   <h3 align="center"><a href="https://arxiv.org/pdf/2408.08206">📄 Paper</a> | <a href="https://water-splatting.github.io/">🌐 Project Page</a></h3>
   <div align="center"></div>
@@ -117,7 +119,7 @@ If you find our code or paper useful, please cite:
 @article{li2024watersplatting,
   title={{W}ater{S}platting: Fast Underwater {3D} Scene Reconstruction using Gaussian Splatting},
   author={Li, Huapeng and Song, Wenxuan and Xu, Tianao and Elsig, Alexandre and Kulhanek, Jonas},
-  journal={arXiv},
-  year={2024}
+  journal={3DV},
+  year={2025}
 }
 ```
