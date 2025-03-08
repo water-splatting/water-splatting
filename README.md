@@ -6,11 +6,11 @@
   <p align="center">
     <a href="https://github.com/IronLu11">Huapeng Li</a>
     ·
-    <a>Wenxuan Song</a>
+    <a href="https://www.linkedin.com/in/wenxuan-song-901123188/">Wenxuan Song</a>
     ·
-    <a>Tianao Xu</a>
+    <a href="https://www.linkedin.com/in/tianao-xu-066b51258/">Tianao Xu</a>
     ·
-    <a>Alexandre Elsig</a>
+    <a href="https://www.linkedin.com/in/alexandre-elsig-516642116/">Alexandre Elsig</a>
     ·
     <a href="https://jkulhanek.com/">Jonas Kulhanek</a>
   </p><p align="center">
