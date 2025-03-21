@@ -71,8 +71,24 @@ git submodule update --recursive
 pip install --no-use-pep517 -e .
 ```
 
+## Data Preprocessing
+To keep consistency across different models, we recomputed the camera intrinsic/extrinsic parameters and performed distortion corrections using [COLMAP](https://github.com/colmap/colmap)'s `image_undistorter` on [SeaThru-NeRF](https://sea-thru-nerf.github.io/) dataset:
+```bash
+colmap image_undistorter \
+  --image_path /your_path_to_dataset/SeathruNeRF_dataset/IUI3-RedSea/images_wb \
+  --input_path /your_path_to_dataset/SeathruNeRF_dataset/IUI3-RedSea/colmap/sparse/0 \
+  --output_path /your_path_to_dataset/undistorted_seathrunerf_dataset/IUI3-RedSea \
+  --output_type COLMAP
+```
+
 ## Training
-To start the training on the [SeaThru-NeRF](https://sea-thru-nerf.github.io/) dataset, run the following commands:
+To start the training on the undistorted SeaThru-NeRF dataset, run the following commands:
+```bash
+cd /your_path_to_repo/water-splatting
+ns-train water-splatting --vis viewer+wandb colmap --downscale-factor 1 --colmap-path sparse --data /your_path_to_dataset/undistorted_seathrunerf_dataset/IUI3-RedSea --images-path images
+```
+
+Or, to start the training on the original [SeaThru-NeRF](https://sea-thru-nerf.github.io/) dataset, run the following commands:
 ```bash
 cd /your_path_to_repo/water-splatting
 ns-train water-splatting --vis viewer+wandb colmap --downscale-factor 1 --colmap-path sparse/0 --data /your_path_to_dataset/SeathruNeRF_dataset/IUI3-RedSea --images-path Images_wb
