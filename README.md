@@ -132,7 +132,7 @@ Jonas Kulhanek acknowledges travel support from the European Union’s Horizon 2
 ## Citation
 If you find our code or paper useful, please cite:
 ```bibtex
-@article{li2024watersplatting,
+@article{li2025watersplatting,
   title={{W}ater{S}platting: Fast Underwater {3D} Scene Reconstruction using Gaussian Splatting},
   author={Li, Huapeng and Song, Wenxuan and Xu, Tianao and Elsig, Alexandre and Kulhanek, Jonas},
   journal={3DV},
